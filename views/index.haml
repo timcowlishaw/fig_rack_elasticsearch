@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Searchotron
+  %body
+    %h1 Searchotron
+    %h2 Search for an article
+    %form{:action => "/articles/search", :method => "get" }
+      %label{:for => "term"} Term:
+      %input{:type => "text", :name => "term"}
+      %input{:type => "submit", :value => "Search"}
+    %h2 Add an article
+    %form{:action => "/articles", :method => "post" }
+      %label{:for => "text"} Text:
+      %textarea{:name => "text"}
+      %input{:type => "submit", :value => "Add"}

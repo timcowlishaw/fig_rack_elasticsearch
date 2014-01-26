@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Searchotron
+  %body
+    %h1 Searchotron
+    %h2 Results for #{locals[:term]}
+    %ul
+      - locals[:results].each do |result|
+        %li= result
